@@ -1,0 +1,58 @@
+body {
+margin: 0;
+font-family: "Comic Sans MS", cursive, sans-serif;
+background: linear-gradient(135deg, #ffe29f, #ffa99f);
+color: #3a2c1b;}
+
+.container {
+max-width: 1200px;
+margin: auto;
+padding: 2rem;}
+
+header {
+-align: center;
+margin-bottom: 2rem;
+animation: fadeIn 2s ease-in}
+
+.grid {
+  display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.5rem;}
+
+.card {
+background: #fff8e1;
+border-radius: 12px;
+padding: 1rem;
+text-align: center;
+transition: transform 0.3s ease;}
+
+.card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+border-radius: 8px;}
+
+.card:hover {
+  transform: scale(1.05) rotate(-1deg);}
+
+footer {
+margin-top: 3rem;
+text-align: center;
+font-style: italic;
+animation: wiggle 3s infinite;}
+
+@keyframes fadeIn {
+0% { opacity: 0; transform: translateY(-20px); }
+100% { opacity: 1; transform: translateY(0); }}
+
+@keyframes wiggle {
+0%, 100% { transform: rotate(0deg); }
+25% { transform: rotate(1deg); }
+75% { transform: rotate(-1deg); }}
+
+@media screen and (max-width: 768px) {
+.grid {
+    grid-template-columns: 1fr;}
+
+body {
+    background: linear-gradient(180deg, #ffa99f, #ffe29f); }}
